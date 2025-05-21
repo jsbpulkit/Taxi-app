@@ -1,0 +1,82 @@
+[
+{
+"id": "1",
+"customerName": "Alice Johnson",
+"date": "2025-05-01",
+"pickupLocation": "Downtown Plaza",
+"dropLocation": "Airport Terminal 3",
+"status": "Completed"
+},
+{
+"id": "2",
+"customerName": "Brian Smith",
+"date": "2025-05-02",
+"pickupLocation": "City Mall",
+"dropLocation": "Hillview Apartments",
+"status": "Cancelled"
+},
+{
+"id": "3",
+"customerName": "Catherine Blake",
+"date": "2025-05-03",
+"pickupLocation": "Main Street",
+"dropLocation": "Green Park",
+"status": "Completed"
+},
+{
+"id": "4",
+"customerName": "David Lee",
+"date": "2025-05-04",
+"pickupLocation": "University Gate",
+"dropLocation": "Central Station",
+"status": "Completed"
+},
+{
+"id": "5",
+"customerName": "Emily Davis",
+"date": "2025-05-05",
+"pickupLocation": "North Avenue",
+"dropLocation": "Lakeside Villas",
+"status": "Cancelled"
+},
+{
+"id": "6",
+"customerName": "Alice Johnson",
+"date": "2025-05-01",
+"pickupLocation": "Downtown Plaza",
+"dropLocation": "Airport Terminal 3",
+"status": "Completed"
+},
+{
+"id": "7",
+"customerName": "Brian Smith",
+"date": "2025-05-02",
+"pickupLocation": "City Mall",
+"dropLocation": "Hillview Apartments",
+"status": "Cancelled"
+},
+{
+"id": "8",
+"customerName": "Catherine Blake",
+"date": "2025-05-03",
+"pickupLocation": "Main Street",
+"dropLocation": "Green Park",
+"status": "Completed"
+},
+{
+"id": "9",
+"customerName": "David Lee",
+"date": "2025-05-04",
+"pickupLocation": "University Gate",
+"dropLocation": "Central Station",
+"status": "Completed"
+},
+{
+"id": "10",
+"customerName": "Emily Davis",
+"date": "2025-05-05",
+"pickupLocation": "North Avenue",
+"dropLocation": "Lakeside Villas",
+"status": "Cancelled"
+}
+]
