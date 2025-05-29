@@ -1,6 +1,9 @@
 import CustomerHistory from "@/src/components/CustomerHistory";
 import Form from "@/src/components/Form";
 import LoginForm from "@/src/components/LoginForm";
+import CustomerProfileScreen from "@/src/screens/CustomerProfile";
+import CustomerProfile from "@/src/screens/CustomerProfile";
+import DriverProfile from "@/src/screens/DriverProfile";
 import History from "@/src/screens/History";
 import Profile from "@/src/screens/Profile";
 import RideDetail from "@/src/screens/RideDetail";
@@ -13,11 +16,11 @@ export default function Index() {
   const router = useRouter();
   return (
     <GestureHandlerRootView
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
+      // style={{
+      //   flex: 1,
+      //   justifyContent: "center",
+      //   alignItems: "center",
+      // }}
     >
        {/* <History/> */}
        {/* <Form/> */}
@@ -25,7 +28,9 @@ export default function Index() {
        {/* <Profile/> */}
        {/* <Rider/> */}
        {/* <CustomerHistory/> */}
-       <RideDetail/>
+       {/* <RideDetail/> */}
+       {/* <CustomerProfile/> */}
+       <DriverProfile/>
     
     </GestureHandlerRootView>
   );
