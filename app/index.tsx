@@ -8,6 +8,7 @@ import History from "@/src/screens/History";
 import Profile from "@/src/screens/Profile";
 import RideDetail from "@/src/screens/RideDetail";
 import Rider from "@/src/screens/Rider";
+import SelectOnMapScreen from "@/src/screens/SelectOnMapScreen";
 import { useRouter } from "expo-router";
 import { Text, View } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
@@ -30,7 +31,8 @@ export default function Index() {
        {/* <CustomerHistory/> */}
        {/* <RideDetail/> */}
        {/* <CustomerProfile/> */}
-       <DriverProfile/>
+       {/* <DriverProfile/> */}
+       <SelectOnMapScreen/>
     
     </GestureHandlerRootView>
   );
