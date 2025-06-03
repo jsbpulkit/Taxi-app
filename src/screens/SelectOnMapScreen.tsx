@@ -10,9 +10,11 @@ import MapView, { Marker, MapPressEvent } from 'react-native-maps';
 import * as Location from 'expo-location';
 import { useNavigation } from '@react-navigation/native';
 
+// Get the width and height of the device screen
 const { width, height } = Dimensions.get('window');
 
 const SelectOnMapScreen = () => {
+  // Region state to define the visible map area (initial region)
   const [region, setRegion] = useState<{
     latitude: number;
     longitude: number;
@@ -20,13 +22,16 @@ const SelectOnMapScreen = () => {
     longitudeDelta: number;
   } | null>(null);
 
+  // State to store the coordinates selected by user
   const [selectedLocation, setSelectedLocation] = useState<{
     latitude: number;
     longitude: number;
   } | null>(null);
 
+  // Navigation instance if needed for screen transitions
   const navigation = useNavigation();
 
+  // Request location permission and get user's current location on mount
   useEffect(() => {
     (async () => {
       const { status } = await Location.requestForegroundPermissionsAsync();
@@ -36,40 +41,45 @@ const SelectOnMapScreen = () => {
       setRegion({
         latitude: location.coords.latitude,
         longitude: location.coords.longitude,
-        latitudeDelta: 0.01,
+        latitudeDelta: 0.01, // How zoomed-in the map is
         longitudeDelta: 0.01,
       });
     })();
   }, []);
 
+  // Handle user tapping on map to select a location
   const handleMapPress = (event: MapPressEvent) => {
     const { latitude, longitude } = event.nativeEvent.coordinate;
     setSelectedLocation({ latitude, longitude });
   };
 
+  // Handle confirm button press
   const handleConfirmLocation = () => {
     if (selectedLocation) {
       console.log('Selected Location:', selectedLocation);
-      // Optional: Replace with navigation or storage logic
+      // You can navigate or store this location here
     }
-    // No alert or error if no location is selected
+    // No alert shown if location is not selected — silent fail
   };
 
   return (
     <View style={styles.container}>
+      {/* Render the map only when region is available */}
       {region && (
         <MapView
           style={styles.map}
           initialRegion={region}
           onPress={handleMapPress}
-          showsUserLocation
+          showsUserLocation 
         >
+          {/* Display marker only if a location is selected */}
           {selectedLocation && (
             <Marker coordinate={selectedLocation} title="Selected Location" />
           )}
         </MapView>
       )}
 
+      {/* Bottom panel to show coordinates and confirm button */}
       <View style={styles.info}>
         {selectedLocation ? (
           <>
@@ -81,7 +91,9 @@ const SelectOnMapScreen = () => {
             </Text>
           </>
         ) : (
-          <Text style={styles.coordText}>Tap anywhere on the map to select a location.</Text>
+          <Text style={styles.coordText}>
+            Tap anywhere on the map to select a location.
+          </Text>
         )}
         <TouchableOpacity style={styles.button} onPress={handleConfirmLocation}>
           <Text style={styles.buttonText}>Confirm Location</Text>
@@ -99,13 +111,13 @@ const styles = StyleSheet.create({
   },
   map: {
     width,
-    height: height * 0.6,
+    height: height * 0.6, 
   },
   info: {
-    height: height * 0.4,
+    height: height * 0.4, 
     padding: 16,
     backgroundColor: '#fff',
-    elevation: 8,
+    elevation: 8, 
     borderTopLeftRadius: 16,
     borderTopRightRadius: 16,
     justifyContent: 'center',

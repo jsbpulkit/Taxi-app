@@ -1,6 +1,7 @@
 import CustomerHistory from "@/src/components/CustomerHistory";
 import Form from "@/src/components/Form";
 import LoginForm from "@/src/components/LoginForm";
+import ReceiptComponent from "@/src/components/ReceiptComponent";
 import CustomerProfileScreen from "@/src/screens/CustomerProfile";
 import CustomerProfile from "@/src/screens/CustomerProfile";
 import DriverProfile from "@/src/screens/DriverProfile";
@@ -32,7 +33,8 @@ export default function Index() {
        {/* <RideDetail/> */}
        {/* <CustomerProfile/> */}
        {/* <DriverProfile/> */}
-       <SelectOnMapScreen/>
+       {/* <SelectOnMapScreen/> */}
+       <ReceiptComponent/>
     
     </GestureHandlerRootView>
   );

@@ -1,0 +1,42 @@
+{
+  "company": {
+    "name": "Orchids Call a Car",
+    "address": "18/1 Old no 51 Velachery main road little mount saidapet chennai",
+    "email": "orchids.calltacar@gmail.com",
+    "phone": "7399906000"
+  },
+  "duty": {
+    "date": "10/05/25",
+    "time": "11:14 AM",
+    "id": "2883/851-01",
+    "type": "BK-10426",
+    "bookedBy": "Orchid AnimeXTravels",
+    "vehicle": "2021 KIA 2CR AX 2M45",
+    "driver": "Siddaraju DK"
+  },
+  "reporting": {
+    "time": "07:30",
+    "location": "Ashok Nagar, Bengaluru"
+  },
+  "drop": {
+    "location": "108, Lavante Road, Shanthala Nagar"
+  },
+  "km": {
+    "start": 35206,
+    "end": 35350,
+    "total": 144,
+    "extra": 64
+  },
+  "time": {
+    "start": "0630 10/05",
+    "end": "2230 10/05",
+    "totalHours": "16:00",
+    "extraHours": "08:00"
+  },
+  "charges": [
+    {
+      "title": "Night allowance",
+      "amount": 200
+    }
+  ]
+}
